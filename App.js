@@ -6,7 +6,8 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 import { Ionicons } from "@expo/vector-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 import HomeScreen from "./screens/HomeScreen";
 import PrayScreen from "./screens/PrayScreen";
@@ -104,7 +105,7 @@ function App() {
               // return <Ionicons name={iconName} size={size} color={color} />;
             } else if (route.name === "Pray") {
               iconName = "md-bug";
-              // return <FontAwesomeIcon icon="coffee" />
+              return <FontAwesomeIcon icon={faCoffee} />
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
